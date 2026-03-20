@@ -15,7 +15,7 @@ while chave:
         p2 = 101325
 
         #Cálculo da Energia Interna
-        va_ener_int = (5/2)*v*(p2-p1)          
+        va_ener_int = (5/2)*v*(p1-p2)          
 
         #Retorno de dados
         print('-'*100)

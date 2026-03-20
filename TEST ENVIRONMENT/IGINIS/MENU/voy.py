@@ -10,7 +10,6 @@ while chave:
     try:
         #Cálculo v0y
         voy = vfxenerit * math.sin(tet)
-        vox = vfxenerit * math.cos(tet)
         tempo = alcance/vfxenerit
 
         print(f'O valor do V0y é de aproximadamente {voy:.2f} m/s.')

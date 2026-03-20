@@ -18,7 +18,7 @@ while chave:
         m = float(input('Digite a massa do foguete em kg: '))
 
         #Fórmula
-        va_ve_ener_int = math.sqrt(((5*v*n)*(p2-p1)/m))
+        va_ve_ener_int = math.sqrt(((5*v*n)*(p1-p2)/m))
 
         print('-'*100)
 

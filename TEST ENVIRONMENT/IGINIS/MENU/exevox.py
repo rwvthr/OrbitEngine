@@ -22,7 +22,7 @@ while chave:
 
         #Fórmula
         alcance = (5*v*n*(p1-p2)*sen_2tet)/(m*g)
-        vfxenerit = math.sqrt(((5*v*n)*(p2-p1)/m))
+        vfxenerit = math.sqrt(((5*v*n)*(p1-p2)/m))
 
         print('-'*100)
 

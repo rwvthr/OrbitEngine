@@ -16,7 +16,7 @@ while chave:
         y = 1.4
 
         #Fórmula
-        w = ((p1*v)/(y-1))*(1-(p1/p2)**((-y+1)/y))
+        w = ((p1*v)/(y-1))*(1-(p2/p1)**((-y+1)/y))
 
         print('-' * 100)
         print(f'O trabalho realizado pelo gás é de {w:.2f} Joules')

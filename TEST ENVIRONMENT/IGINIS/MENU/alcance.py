@@ -21,7 +21,7 @@ while chave:
         sen_2tet = math.sin(x)
 
         #Fórmula
-        alcance = (5*v*n*(p1-p2)*sen_2tet)/(m*g)
+        alcance = (5*v*n*(p2-p1)*sen_2tet)/(m*g)
 
         print('-'*100)
         print(f'O alcance do foguete é de {alcance:.2f} metros.')
