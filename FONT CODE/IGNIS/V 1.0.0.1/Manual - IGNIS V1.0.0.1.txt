@@ -1,0 +1,54 @@
+----------------------------------------------------------------------------------------------------------------------
+Caro usuário, seja bem vindo ao manual de instruções do IGNIS versão 1.0.0.1. 
+----------------------------------------------------------------------------------------------------------------------
+
+1 - Após a extração do arquivo, será criada uma pasta contento esse manual e uma subpasta chamada "doc", abra-a
+e confira se há 12 itens incluindo o menu.
+
+2 - Depois de conferir se está tudo certo siga o passo a passo para usar o programa.
+
+3 - Passo a passo: [1] No Windows, tecle as teclas Windows + R, após isso irá abrir uma janela com o nome Executar, nela haverá uma caixa que será possível escrever, clique nela e digite: "cmd" e tecle Enter, isso abrirá o prompt de comandp; [2] Agora procure o disco e o local onde se encontra seu arquivo, se seu disco tiver mais de uma partição (ex.: Disco C:, Disco D:) procure em qual local do disco ela se encontra (ex.: Dowloads, Área de Trabalho, etc...), depois digite os seguintes comandos:
+
+Digite o nome do disco (sem as aspas), ex.:
+"D:"
+
+Deve aparecer assim:
+"D:\>"
+
+Agora, para entrar nas pastas é necessário usar um comando chamado "cd", vamos supor que a pasta com o arquivo esteja no disco D:, em dowloads, nesse caso a sequencia de códigos deverá ficar (sem aspas):
+
+"D:"
+
+"cd downloads"
+
+"cd IGNIS.V.1.0.0.1"
+
+"cd doc"
+
+Deverá aparecer assim: "D:\downloads\IGNIS.V.1.0.0.1\doc>".
+
+Depois de acessada a pasta que contém os arquivos você irá digitar o seguinte código:
+
+"python3 menu.py" ou "python menu.py"
+
+Caso apareça um erro dizendo que o python não se encontra instalado, baixe a versão mais recente pela Microsoft Store ou pelo próprio site do Python. Se o erro persistir siga a recomendação: Abra as configurações > aplicativos > configurações avançadas dos aplicativos > analises de execução de app > e desative as opções que dizem o seguinte: "pyhton install manager". 
+----------------------------------------------------------------------------------------------------------------------
+Pronto, após seguir todos os passos, o programa poderá ser rodado normalmente.
+----------------------------------------------------------------------------------------------------------------------
+Obs: Se você preferir você pode abrir os arquivos por uma IDE, como por exemplo: VSCode, PyCharm, Google Colab, Jupyter, entre outros.
+
+----------------------------------------------------------------------------------------------------------------------
+
+Em casos de dúvidas, não deixe de nos contactar nos e-mails: mrls9@aluno.ifal.edu.br ou jgls6@aluno.ifal.edu.br
+Agradecemos você por usar o IGNIS!! 
+
+At.te Equipe de pesquisa.
+
+
+----------------------------------------------------------------------------------------------------------------------
+Ajude nos a saber no que precisamos melhorar com sugestões através do formulário: https://forms.gle/n7WmyAywG3jtzmXh6
+Reclamações aqui: https://forms.gle/epFcaFW2G2wxvWJcA
+----------------------------------------------------------------------------------------------------------------------
+
+
+
