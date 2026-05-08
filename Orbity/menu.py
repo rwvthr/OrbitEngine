@@ -49,7 +49,7 @@ if per[0] == 'S':
     print('''Avisos importantes:     
 1- Os cálculos e gráficos são baseados em fórmulas da Termodinâmica e Física Clássica, não levando em consideração fatores como resistência do ar, variações de temperatura, umidade, entre outros;      
 2- O programa IGNIS é destinado para o lançamento de foguetes acadêmicos, não recomendamos para outros fins;       
-3- O código fonte está em constante atualização, novas funções e melhorias serão adicionadas futuramente, acesse o repositório oficial para acompanhar as novidades: https://github.com/rwvthr/OrbitEngine;       
+3- O código fonte está em constante atualização, novas funções e melhorias serão adicionadas futuramente, acesse o repositório oficial para acompanhar as novidades: https://github.com/rwvthr/Orbity;       
 4- O programa apresenta pequenas margens de erro, recomendamos sempre revisar os cálculos e os valores;              
 5- Em caso sugestões ou problemas, por favor, entre em contato com os desenvolvedores através do e-mail: mrls9@aluno.ifal.edu.br ou jgsl6@aluno.ifal.edu.br''')
     print('-' * 100)
@@ -69,15 +69,15 @@ system('cls')
 print('''-----------------------------------------------------------------------------------------------------
 Antes de acessar o menu principal, vamos explicar como o programa funciona: 
 -----------------------------------------------------------------------------------------------------
-O programa IGNIS é dividido em duas partes principais: Cálculos e Geração de Gráficos.
+O programa Orbity é dividido em duas partes principais: Cálculos e Geração de Gráficos.
 Siga os passos recomendados para utilizar o programa de forma eficiente:
 -----------------------------------------------------------------------------------------------------
 1- Leia os avisos importantes para entender as limitações e recomendações do programa;   
 2- Acesse o menu principal para escolher o serviço desejado, seja um cálculo específico ou a geração de um gráfico; 
 3- Insira o número correspondente ao serviço desejado, e siga as instruções para fornecer os dados necessários para o cálculo ou gráfico;
 4- Revise os resultados obtidos, e se necessário, faça ajustes nos dados de entrada para obter resultados mais precisos;    
-5- Ao final, receberá uma mensagem perguntando se deseja retornar ao menu principal ou encerrar o programa, escolha a opção desejada para continuar ou finalizar sua experiência com o IGNIS.    
-6- Agradeçemos por utilizar o IGNIS, esperamos que seja uma ferramenta útil para seus estudos e projetos relacionados ao lançamento de foguetes educacionais!
+5- Ao final, receberá uma mensagem perguntando se deseja retornar ao menu principal ou encerrar o programa, escolha a opção desejada para continuar ou finalizar sua experiência.    
+6- Agradeçemos por utilizar o Orbity, esperamos que seja uma ferramenta útil para seus estudos e projetos relacionados ao lançamento de foguetes educacionais!
 -----------------------------------------------------------------------------------------------------
             ''')
 

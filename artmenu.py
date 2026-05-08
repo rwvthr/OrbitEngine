@@ -1,12 +1,6 @@
 import time
 
-def clear_screen():
-    from os import system
-    import platform
-    if platform.system() == 'Windows':
-        system('cls')
-    else:
-        system('clear')
+
 
 asciiart = r"""     
    _        ___       _     _ _                        

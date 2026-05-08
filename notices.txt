@@ -1,0 +1,29 @@
+Important notices:
+
+
+English version -
+
+
+[01] Calculations and graphs are based on formulas from Thermodynamics and Classical Physics, not taking into account factors such as air resistance, temperature variations, humidity, among others;
+
+[02] The IGNIS program is intended for the launch of academic rockets, we do not recommend it for other purposes;
+
+[03] The source code is constantly updated, new features and improvements will be added in the future, access the official repository to follow the news: https://github.com/rwvthr/Orbity;
+
+[04] The program has small margins of error, we always recommend reviewing the calculations and values;
+
+[05] In case of suggestions or problems, please contact the developers via email: mrls9@aluno.ifal.edu.br or jgsl6@aluno.ifal.edu.br.
+
+
+Portuguese version - 
+
+
+[01] Os cálculos e gráficos são baseados em fórmulas da Termodinâmica e Física Clássica, não levando em consideração fatores como resistência do ar, variações de temperatura, umidade, entre outros;
+
+[02] O programa IGNIS é destinado para o lançamento de foguetes acadêmicos, não recomendamos para outros fins;
+
+[03] O código fonte está em constante atualização, novas funções e melhorias serão adicionadas futuramente, acesse o repositório oficial para acompanhar as novidades: https://github.com/rwvthr/Orbity;
+
+[04] O programa apresenta pequenas margens de erro, recomendamos sempre revisar os cálculos e os valores;
+
+[05] Em caso sugestões ou problemas, por favor, entre em contato com os desenvolvedores através do e-mail: mrls9@aluno.ifal.edu.br ou jgsl6@aluno.ifal.edu.br.
