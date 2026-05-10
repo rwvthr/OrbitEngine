@@ -27,3 +27,4 @@ Portuguese version -
 [04] O programa apresenta pequenas margens de erro, recomendamos sempre revisar os cálculos e os valores;
 
 [05] Em caso sugestões ou problemas, por favor, entre em contato com os desenvolvedores através do e-mail: mrls9@aluno.ifal.edu.br ou jgsl6@aluno.ifal.edu.br.
+
