@@ -1,7 +1,7 @@
 import time
 from os import system
 import math
-from src.exevox import alcance, vfxenerit, tet
+from src.graphs.exevox import alcance, vfxenerit, tet
 import numpy as np
 import matplotlib.pyplot as plt
 

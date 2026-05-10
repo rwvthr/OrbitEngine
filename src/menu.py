@@ -2,7 +2,7 @@ import time
 from os import system
 import importlib
 import sys
-from functions import clear_screen
+from .functions import clear_screen, mensagemend, mensagemvoltar, loadinganm, loadinganmexit
 
 def asciimenu():
     asciiart = r"""     
@@ -46,8 +46,6 @@ def headermenu():
     print(f"\033[38;5;208m{asciiart}\033[0m")
     print(f"\033[38;2;64;224;208m{options1}\033[0m")
 
-
-
 chaveanterior = [0]
 chave = 1
 index = 0
@@ -58,79 +56,80 @@ while chave > chaveanterior[index]:
     try:
         pergunta = int(input('\033[38;2;64;224;208mPlease select an option: \033[0m').strip())
         print(' ')
+
         clear_screen()
 
         if pergunta == 1:
-            if 'trabalho' in sys.modules:
+            if 'src.calcs.trabalho' in sys.modules:
                 importlib.reload(trabalho)
             else:
-                import src.trabalho as trabalho
+                from .calcs import trabalho
 
         elif pergunta == 2:
-            if 'alcance' in sys.modules:
+            if 'src.calcs.alcance' in sys.modules:
                 importlib.reload(alcance)
             else:
-                import src.alcance as alcance
+                from .calcs import alcance
         
         elif pergunta == 3:
-            if 'vaenergiainterna' in sys.modules:
+            if 'src.calcs.vaenergiainterna' in sys.modules:
                 importlib.reload(vaenergiainterna)
             else:
-                import src.vaenergiainterna as vaenergiainterna
+                from .calcs import vaenergiainterna
         
         elif pergunta == 4:
-            if 'vfxtrabalho' in sys.modules:
+            if 'src.calcs.vfxtrabalho' in sys.modules:
                 importlib.reload(vfxtrabalho)
             else:
-                from calcs import vfxtrabalho
+                from .calcs import vfxtrabalho
 
         elif pergunta == 5:
-            if 'vfxdedeltau' in sys.modules:
+            if 'src.calcs.vfxdedeltau' in sys.modules:
                 importlib.reload(vfxdedeltau)
             else:
-                from calcs import vfxdedeltau
+                from .calcs import vfxdedeltau
 
         elif pergunta == 6:
-            if 'velocidade' in sys.modules:
+            if 'src.calcs.velocidade' in sys.modules:
                 importlib.reload(velocidade)
             else:
-                import src.velocidade as velocidade
+                from .calcs import velocidade
 
         elif pergunta == 7:
-            if 'eta' in sys.modules:
+            if 'src.calcs.eta' in sys.modules:
                 importlib.reload(eta)
             else:
-                import src.eta as eta
+                from .calcs import eta
 
         elif pergunta == 8:
-            if 'alcancexpress' in sys.modules:
+            if 'src.graphs.alcancexpress' in sys.modules:
                 importlib.reload(alcancexpress)
             else:
-                import src.alcancexpress as alcancexpress
+                from .graphs import alcancexpress
         
         elif pergunta == 9:
-            if 'alcancexeta' in sys.modules:
+            if 'src.graphs.alcancexeta' in sys.modules:
                 importlib.reload(alcancexeta)
             else:
-                import src.alcancexeta as alcancexeta
+                from .graphs import alcancexeta
         
         elif pergunta == 10:
-            if 'vox' in sys.modules:
+            if 'src.graphs.vox' in sys.modules:
                 importlib.reload(vox)
             else:
-                import src.graphs.vox as vox
+                from .graphs import vox
         
         elif pergunta == 11:
-            if 'voy' in sys.modules:
+            if 'src.graphs.voy' in sys.modules:
                 importlib.reload(voy)
             else:
-                import src.graphs.voy as voy
+                from .graphs import voy
     
-        elif pergunta == 0:
-            print('Encerrando programa...')
-            time.sleep(1.5)
-            chave = False
-            system('cls')
+        # elif pergunta == 0:
+        #     print('Encerrando programa...')
+        #     time.sleep(1.5)
+        #     chave = False
+        #     system('cls')
         else:
             print('Número inválido, tente novamente.')
             print('Carregando...')
