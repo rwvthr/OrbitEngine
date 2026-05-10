@@ -93,6 +93,8 @@ key = 1
 index = 0
 
 while key > keyback[index]:
+    clear_screen()
+
     header()
 
     try:
