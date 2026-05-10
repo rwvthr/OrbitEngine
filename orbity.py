@@ -131,7 +131,7 @@ while key > keyback[index]:
             clear_screen()
 
         elif pergunta == 4:
-            if 'menu' in sys.modules:
+            if 'src.menu' in sys.modules:
                 importlib.reload(menu)
             else:
                 from src import menu

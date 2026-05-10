@@ -125,11 +125,12 @@ while chave > chaveanterior[index]:
             else:
                 from .graphs import voy
     
-        # elif pergunta == 0:
-        #     print('Encerrando programa...')
-        #     time.sleep(1.5)
-        #     chave = False
-        #     system('cls')
+        elif pergunta == 0:
+            print('Encerrando programa...')
+            time.sleep(1.5)
+            chave = False
+            clear_screen()
+
         else:
             print('Número inválido, tente novamente.')
             print('Carregando...')
