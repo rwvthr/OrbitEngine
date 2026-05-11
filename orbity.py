@@ -158,23 +158,5 @@ while key > keyback[index]:
         key = 1
         clear_screen()
 
-
-
-
-
-
-
-
-
-
-
-
-
-#Condição para loop continuar
-keyback.append(key)
-index += 1
-key += 1 
-
-
-
-
+    
+#end

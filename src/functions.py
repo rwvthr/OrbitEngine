@@ -59,3 +59,35 @@ def mensagemend():
     print(' ')
 
     loadinganmexit()
+
+def loadingcalc():
+    AZUL = '\033[94m'                      
+    ROSA_VIBRANTE = '\033[38;2;255;20;147m' 
+    NEGRITO = '\033[1m'                    
+    RESET = '\033[0m'                      
+
+    animation = ["\\", "|", "/", "-"]
+    msg = "Calculating... "
+
+    for _ in range(3):
+        for i in range(len(animation)):
+            time.sleep(0.2)
+            
+            sys.stdout.write(f"\r{AZUL}{msg}{RESET} {NEGRITO}{ROSA_VIBRANTE}{animation[i % len(animation)]}{RESET}")
+            sys.stdout.flush()
+
+def loading():
+    AZUL = '\033[94m'                      
+    ROSA_VIBRANTE = '\033[38;2;255;20;147m' 
+    NEGRITO = '\033[1m'                    
+    RESET = '\033[0m'                      
+
+    animation = ["\\", "|", "/", "-"]
+    msg = "Loading ... "
+
+    for _ in range(3):
+        for i in range(len(animation)):
+            time.sleep(0.2)
+            
+            sys.stdout.write(f"\r{AZUL}{msg}{RESET} {NEGRITO}{ROSA_VIBRANTE}{animation[i % len(animation)]}{RESET}")
+            sys.stdout.flush()

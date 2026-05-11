@@ -2,7 +2,7 @@ import time
 from os import system
 import importlib
 import sys
-from .functions import clear_screen, mensagemend, mensagemvoltar, loadinganm, loadinganmexit
+from .functions import clear_screen, mensagemend, mensagemvoltar, loadinganm, loadinganmexit, loading
 
 def asciimenu():
     asciiart = r"""     
@@ -16,6 +16,10 @@ def asciimenu():
         O R B I T Y - v1.0.0.1
          Author: M.R.L Silva        
 """ 
+    return asciiart
+
+def header():
+    asciiart = asciimenu()
     return asciiart
 
 def headermenu():
@@ -126,10 +130,10 @@ while chave > chaveanterior[index]:
                 from .graphs import voy
     
         elif pergunta == 0:
-            print('Encerrando programa...')
-            time.sleep(1.5)
-            chave = False
+            loadinganmexit()
+            print('')
             clear_screen()
+            break
 
         else:
             print('Número inválido, tente novamente.')
@@ -138,9 +142,11 @@ while chave > chaveanterior[index]:
             system('cls')
             continue
 
-        inicializar = input('Deseja retornar ao menu principal? (S/N) :').upper().strip()
 
-        if inicializar[0] == 'S':
+        #Falta arrumar aqui---
+        inicializar = input('Deseja retornar ao menu principal? [Y/N] :').upper().strip()
+
+        if inicializar[0] == 'Y':
             chaveanterior.append(chave)
             chave += 1
             index += 1
