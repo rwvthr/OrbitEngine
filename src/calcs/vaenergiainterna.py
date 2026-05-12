@@ -1,44 +1,87 @@
 from os import system
 import time
+from src.functions import loading, loadingcalc, clear_screen
 
-chave = True
+def ascii():
+    asciiart = r"""     
+      ___       _     _ _                        
+     / _ \ _ __| |__ (_) |_ _   _               
+    | | | | '__| '_ \| | __| | | |              
+    | |_| | |  | |_) | | |_| |_| |              
+     \___/|_|  |_.__/|_|\__|\__, |             
+                            |___/   
 
-while chave:
+        O R B I T Y - v1.0.0.1
+         Author: rwvthrdev        
+""" 
+    return asciiart
+
+def header():
+    asciiart = ascii()
+
+    options1 = r"""
+[!] - Bem-vindo ao módulo 3: Calculo da Variação da Energia Interna.
+"""
+
+    print(f"\033[38;5;208m{asciiart}\033[0m")
+    print(f"\033[94m{options1}\033[0m")
+
+chave = 1
+counter = 0
+
+while chave > counter:
     try:
-        #Inicialização do módulo
-        print('Bem vindo ao módulo de cálculo da variação da energia interna da base!')
-        print('-'*100)
-
-        #Entrada de dados
-        v = float(input('Digite o volume inicial em m3: '))                                  
-        p1 = float(input('Digite a pressão inicial em PA (Pascal): '))
+        header()
+        print('')
+        
+        v = float(input('\033[38;5;208mDigite o volume inicial em metros cúbicos (m³) >>> \033[0m'))                                  
+        p1 = float(input('\033[38;5;208mDigite a pressão inicial em Pascal (PA) >>> \033[0m'))
         p2 = 101325
 
-        #Cálculo da Energia Interna
+        
         va_ener_int = (5/2)*v*(p1-p2)          
 
-        #Retorno de dados
-        print('-'*100)
-        print(f'A variação energia interna do gás é {va_ener_int:.2f} Joules')
+        print(' ')
+        loadingcalc()
+        
+        print(f'''
+              
+\033[38;5;208mO resultado obtido para a Variação da Energia Interna é >>> {va_ener_int:.2f} Joules.\033[0m''')
 
-        #Limpeza de Terminal
-        time.sleep(5)
-        system('cls')
+        print(' ')
+        
+        inicializar = input('\033[94mDeseja utilizar o programa novamente ? [Y/N] >>> \033[0m').strip().upper()
+        print(' ')
+        if inicializar[0] == 'Y':
+            counter = 0
+            clear_screen()
+                    
+        elif inicializar[0] == 'N':
+            loading()
+            counter += 1
+            clear_screen()
 
-        #Pergunta de reinicialização
-        reiniciar = input('Deseja utilizar o módulo novamente ? (S/N): ').strip().upper()
-        if reiniciar[0] == 'S':
-            chave = True
-            system('cls')
-        else:
-            print('Carregando...')
-            chave = False
-            system('cls')
-
+        else: 
+            print('')
+            print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+            print('')
+            loading()
+            counter = 0
+            clear_screen()
+    
     except ValueError:
-        print('\nValor inválido, tente novamente.')
-        print('\nCarregando...')
-        time.sleep(1)
-        chave = True
-        system('cls')
+        print('')
+        print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+        print('')
+        loading()
+        counter = 0
+        clear_screen()
+    
+    except ZeroDivisionError:
+        print('')
+        print('\033[38;2;255;20;147mNão é possível dividir por zero, tente novamente.\033[0m')
+        print('')
+        loading()
+        counter = 0
+        clear_screen()
 
