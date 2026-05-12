@@ -14,7 +14,7 @@ def asciimenu():
                             |___/   
 
         O R B I T Y - v1.0.0.1
-         Author: M.R.L Silva        
+         Author: rwvthrdev        
 """ 
     return asciiart
 
@@ -144,27 +144,30 @@ while chave > chaveanterior[index]:
 
 
         #Falta arrumar aqui---
-        inicializar = input('Deseja retornar ao menu principal? [Y/N] :').upper().strip()
+        inicializar = input('\033[38;5;208mDeseja retornar ao menu principal? [Y/N] >>> \033[0m').upper().strip()
 
         if inicializar[0] == 'Y':
             chaveanterior.append(chave)
             chave += 1
             index += 1
-            print('Retornando ao menu principal...')
-            time.sleep(1.5)
-            system('cls')
+            print('')
+            loading()
+            clear_screen()
         
         elif inicializar[0] == 'N':
-            print('Encerrando programa...')
-            time.sleep(1.5)
-            system('cls')
+            print('')
+            mensagemend()
+            clear_screen()
             break
 
     except ValueError:
-        print('Valor inválido, tente novamente.')
-        print('Carregando...')
-        time.sleep(1)
-        chave = True
-        system('cls')
+        print('')
+        print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+        print('')
+        loading()
+        chaveanterior.append(chave)
+        chave += 1
+        index += 1
+        clear_screen()
 
 

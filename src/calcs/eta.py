@@ -1,44 +1,103 @@
 import time
 from os import system
-chave = True
-while chave:
+from src.functions import loadingcalc, clear_screen, loading
+
+def ascii():
+    asciiart = r"""     
+      ___       _     _ _                        
+     / _ \ _ __| |__ (_) |_ _   _               
+    | | | | '__| '_ \| | __| | | |              
+    | |_| | |  | |_) | | |_| |_| |              
+     \___/|_|  |_.__/|_|\__|\__, |             
+                            |___/   
+
+        O R B I T Y - v1.0.0.1
+         Author: rwvthrdev        
+""" 
+    return asciiart
+
+def header():
+    asciiart = ascii()
+
+    options1 = r"""
+[!] - Bem-vindo ao módulo 7: Calculo do Rendimento.
+"""
+
+    print(f"\033[38;5;208m{asciiart}\033[0m")
+    print(f"\033[94m{options1}\033[0m")
+
+chave = 1
+counter = 0
+
+while chave > counter:
     try:
-        print('-'*100)
-        print('Recomendamos que antes de executar esse programa execute o\nprograma que calcula a variação da energia interna e o que\ncalcula a velocidade e anote os valores recebidos.')
-        print('-'*100)
+        header()
+        print('')
 
-        continua = input("Pressione Enter pra continuar...")
+        def aviso():
+            print('\033[38;2;255;20;147mRecomendamos que, antes de executar este programa, você execute\nprimeiro os programas que calculam a variação da energia interna\ne a velocidade, anotando os valores obtidos.\033[0m')
+            print('')
 
-        system('cls')
+            continua = input("\033[38;5;208mPress Enter to continue >>> \033[0m")
+            clear_screen()
 
-        print('-'*100)
-        print('Bem vido ao módulo de cálculo do rendimento!')
-        print('-'*100)
+            return continua
+            
+        aviso()
 
-        delta_u = float(input('Digite o valor da Variação da Energia Interna em Joules: '))
-        m = float(input('Digite o valor da massa do foguete em Kg: '))
-        v = float(input('Digite o valor da velocidade do foguete em m/s: '))
+        header()
+        print('')
+
+        delta_u = float(input('\033[38;5;208mDigite o valor da Variação da Energia Interna em Joules (J) >>> \033[0m'))
+        m = float(input('\033[38;5;208mDigite a massa do foguete em kilogramas (kg) >>> \033[0m'))
+        v = float(input('\033[38;5;208mDigite a velocidade do foguete em metros por segundo (m/s) >>> \033[0m'))
 
         e_cinetica = (m*(v**2))/2
 
         eta = e_cinetica/delta_u
 
-        print(f'O valor aproximado do rendimento (eta) é: {eta:.2f}')
+        print('')
+        loadingcalc()
 
-        time.sleep(3)
-        system('cls')
+        print(f'''
+              
+\033[38;5;208mO resultado obtido para o rendimento é >>> {eta:.2f}.\033[0m''')
+        
+        print('')
 
-        reiniciar = input('Deseja utilizar o módulo novamente? (S/N): ').strip().upper()
-        if reiniciar[0] == 'S':
-            chave = True
-            system('cls')
-        else:
-            chave = False
-            system('cls')
+        inicializar = input('\033[94mDeseja utilizar o programa novamente ? [Y/N] >>> \033[0m').strip().upper()
+        print(' ')
+        if inicializar[0] == 'Y':
+            clear_screen()
+            counter = 0
+            
+                    
+        elif inicializar[0] == 'N':
+            loading()
+            clear_screen()
+            counter += 1
+
+        else: 
+            print('')
+            print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+            print('')
+            loading()
+            counter = 0
+            clear_screen()
+            
 
     except ValueError:
-        print('Valor inválido, tente novamente.')
-        print('Carregando...')
-        time.sleep(1)
-        chave = True
-        system('cls')
+        print('')
+        print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+        print('')
+        loading()
+        counter = 0
+        clear_screen()
+    
+    except ZeroDivisionError:
+        print('')
+        print('\033[38;2;255;20;147mNão é possível dividir por zero, tente novamente.\033[0m')
+        print('')
+        loading()
+        counter = 0
+        clear_screen()

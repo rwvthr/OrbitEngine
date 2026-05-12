@@ -54,7 +54,7 @@ def ascii():
                             |___/   
 
         O R B I T Y - v1.0.0.1
-         Author: M.R.L Silva        
+         Author: rwvthrdev        
 """ 
     return asciiart
 #Função do menu

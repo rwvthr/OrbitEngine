@@ -91,3 +91,17 @@ def loading():
             
             sys.stdout.write(f"\r{AZUL}{msg}{RESET} {NEGRITO}{ROSA_VIBRANTE}{animation[i % len(animation)]}{RESET}")
             sys.stdout.flush()
+
+def asciiart():
+    asciiart = r"""     
+      ___       _     _ _                        
+     / _ \ _ __| |__ (_) |_ _   _               
+    | | | | '__| '_ \| | __| | | |              
+    | |_| | |  | |_) | | |_| |_| |              
+     \___/|_|  |_.__/|_|\__|\__, |             
+                            |___/   
+
+        O R B I T Y - v1.0.0.1
+         Author: rwvthrdev        
+""" 
+    return asciiart

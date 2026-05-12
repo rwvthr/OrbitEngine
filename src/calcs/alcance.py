@@ -13,7 +13,7 @@ def ascii():
                             |___/   
 
         O R B I T Y - v1.0.0.1
-         Author: M.R.L Silva        
+         Author: rwvthrdev        
 """ 
     return asciiart
 
@@ -46,7 +46,7 @@ while chave > counter:
         x = math.radians(2*tet)
         sen_2tet = math.sin(x)
 
-        alcance = (5*v*n*(p2-p1)*sen_2tet)/(m*g)
+        alcance = (5*v*n*(p1-p2)*sen_2tet)/(m*g)
 
         print(' ')
         loadingcalc()
@@ -57,7 +57,6 @@ while chave > counter:
 
         print(' ')
 
-        #Pergunta de reinicialização
         inicializar = input('\033[94mDeseja utilizar o programa novamente ? [Y/N] >>> \033[0m').strip().upper()
         print(' ')
         if inicializar[0] == 'Y':
@@ -67,6 +66,14 @@ while chave > counter:
         elif inicializar[0] == 'N':
             loading()
             counter += 1
+            clear_screen()
+
+        else: 
+            print('')
+            print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+            print('')
+            loading()
+            counter = 0
             clear_screen()
     
     except ValueError:
