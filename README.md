@@ -56,6 +56,12 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+!If you encounter an error in NumPy like I did, paste this command:
+
+```bash
+pip install --only-binary :all: numpy
+```
+
 7. Run the file:
 
 ```bash
