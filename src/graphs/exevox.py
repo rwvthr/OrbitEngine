@@ -1,53 +1,92 @@
 import math
 from os import system
 import time
+from src.functions import loadingcalc, clear_screen, loading
 
-chave = True
-while chave:
+def ascii():
+    asciiart = r"""     
+      ___       _     _ _                        
+     / _ \ _ __| |__ (_) |_ _   _               
+    | | | | '__| '_ \| | __| | | |              
+    | |_| | |  | |_) | | |_| |_| |              
+     \___/|_|  |_.__/|_|\__|\__, |             
+                            |___/   
+
+        O R B I T Y - v1.0.0.1
+         Author: rwvthrdev        
+""" 
+    return asciiart
+
+def header():
+    asciiart = ascii()
+
+    options1 = r"""
+[!] - Bem-vindo ao módulo 10: Gráfico da Velocidade Horizontal x Tempo.
+"""
+
+    print(f"\033[38;5;208m{asciiart}\033[0m")
+    print(f"\033[94m{options1}\033[0m")
+
+chave = 1
+counter = 0
+
+while chave > counter:
     try:
-        #Introdução ao módulo
-        print('Bem-vindo ao módulo de cálculo do V0x em função do tempo!')
-        print('-'*100)
+        print(' ')
+        header()
 
-        #Entrada de dados
-        v = float(input('Digite o volume em m3: '))
-        m = float(input('Digite a massa do foguete em kg: '))
-        n = float(input('Digite o rendimento em decimal. Ex.: 30% = 0.3: '))
-        tet = float(input('Digite o ângulo da base de lançamento em graus: '))
+        v = float(input('\033[38;5;208mDigite o volume em metros cúbicos (m³) >>> \033[0m'))
+        m = float(input('\033[38;5;208mDigite a massa do foguete em kilogramas (kg) >>> \033[0m'))
+        n = float(input('\033[38;5;208mDigite o rendimento em numero decimal (Ex: 0.10) >>> \033[0m'))
+        tet = float(input('\033[38;5;208mDigite o ângulo da base de lancamento em graus (Ex: 45) >>> \033[0m'))
         g = 9.81
-        p1 = float(input('Digite a pressão inicial em PA (Pascal): '))
+        p1 = float(input('\033[38;5;208mDigite a pressão inicial em Pascal (PA) >>> \033[0m'))
         p2 = 101325
         x = math.radians(2*tet)
         sen_2tet = math.sin(x)
 
-        #Fórmula
+
         alcance = (5*v*n*(p1-p2)*sen_2tet)/(m*g)
         vfxenerit = math.sqrt(((5*v*n)*(p1-p2)/m))
 
-        print('-'*100)
+        print(f'''
+              
+\033[38;5;208mO alcance do foguete é de >>> \033[94m{alcance:.2f} \033[38;5;208mmetros e a velocidade final do
+foguete é de >>> \033[94m{vfxenerit:.2f} \033[38;5;208mmetros por segundo.
+\033[0m''')
 
-        print(f'O alcance do foguete é de aproximadamente {alcance:.2f} metros.')
-        print(f'A velocidade final do foguete é de aproximadamente {vfxenerit:.2f} m/s.')
+        inicializar = input('\033[94mDeseja utilizar o programa novamente ? [Y/N] >>> \033[0m').strip().upper()
+        print(' ')
+        if inicializar[0] == 'Y':
+            counter = 0
+            clear_screen()
+                    
+        elif inicializar[0] == 'N':
+            loading()
+            counter += 1
+            clear_screen()
 
-        time.sleep(5)
-        system('cls')
-
-        print('Aviso: Caso você digite não, o gráfico e os resultados\npermanecerão e para mudar os valores será necessário\nreeinciar o programa!')
-        print('-'*100)
-
-        inicializar = input('Deseja alterar os valores? (S/N): ').strip().upper()
-        if inicializar[0] == 'S':
-            chave = True
-            system('cls')
-        else:
-            print('Carregando...')
-            time.sleep(2)
-            chave = False
-            system('cls')
+        else: 
+            print('')
+            print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+            print('')
+            loading()
+            counter = 0
+            clear_screen()
+    
     except ValueError:
-        print('\nValor inválido, tente novamente.')
-        print('\nCarregando...')
-        time.sleep(1)
-        chave = True
-        system('cls')
+        print('')
+        print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+        print('')
+        loading()
+        counter = 0
+        clear_screen()
+    
+    except ZeroDivisionError:
+        print('')
+        print('\033[38;2;255;20;147mNão é possível dividir por zero, tente novamente.\033[0m')
+        print('')
+        loading()
+        counter = 0
+        clear_screen()
 

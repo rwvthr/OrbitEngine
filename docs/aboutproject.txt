@@ -1,20 +1,4 @@
-About the project.
-
-English version -
-
-Advisor of project: Dr. Karciano José da Silva Santos
-Collaborators: M.R.L Silva & J.G.S Lima
-
-Title: Mathematical Modeling and Computer Simulation of the Launch of Educational Rockets with Air Resistance: A Tool for Teaching Physics and Applied Technologies.
-
-Keyword: Rockets; Oblique Launch; Python; Runge-Kutta; Air Resistance.
-
-Description:
-
-This project proposes to develop a mathematical and computational model to describe the launch of educational rockets propelled by water and/or compressed air, commonly used in school activities and competitions such as the Brazilian Rocket Show (MOBFOG). It's easy to find materials online that cover the general aspects of building and launching school rockets. Scientific articles published in physics teaching journals focus more on modeling rocket flight under the influence of air, and the rate at which the rocket's water mass varies over time but do not bother to describe the Physical process that happens at the rocket launch base. Despite the widespread pedagogical use of these rockets, there is a scarcity of articles in the Physics teaching literature that address the physical modeling of the launch pad (its efficiency, for example), especially the thermodynamic process involved in releasing the energy stored in compressed air. The methodology of this project includes the formulation of equations based on the laws of Thermodynamics and Mechanics, the implementation of a computer program in Python, and the validation of the equations with data obtained experimentally from real launches of these rockets. As a result of this project, an educational simulator, a mini-course on rocket production and launch for teaching Physics, the generation of data that contribute to future technological improvements, and an article published in a Physics teaching journal are expected. The project innovates by proposing a theoretical and applied approach to a system widely explored, but still little disseminated in our schools from a scientific and technological point of view.
-
-
-Portuguese version:
+Sobre o projeto!
 
 Orientador do projeto: Dr. Karciano José da Silva Santos
 Colaboradores: M.R.L Silva e J.G.S Lima
@@ -27,7 +11,5 @@ Descrição:
 
 Este projeto propõe desenvolver um modelo matemático e computacional para descrever o lançamento de foguetes educativos impulsionados por água e/ou ar comprimido, comumente utilizados em atividades escolares e competições como o Brazilian Rocket Show (MOBFOG). É fácil encontrar materiais on-line que abordem os aspectos gerais da construção e lançamento de foguetes escolares. Artigos científicos publicados em periódicos de ensino de física se concentram mais na modelagem do voo do foguete sob a influência do ar e na taxa na qual a massa de água do foguete varia ao longo do tempo, mas não se preocupam em descrever o processo físico que acontece na base de lançamento do foguete. Apesar do uso pedagógico generalizado desses foguetes, há escassez de artigos na literatura de ensino de Física que abordem a modelagem física da plataforma de lançamento (sua eficiência, por exemplo), especialmente o processo termodinâmico envolvido na liberação da energia armazenada no ar comprimido. A metodologia deste projeto inclui a formulação de equações baseadas nas leis da Termodinâmica e Mecânica, a implementação de um programa de computador em Python e a validação das equações com dados obtidos experimentalmente a partir de lançamentos reais destes foguetes. Como resultado deste projeto, são esperados um simulador educacional, um minicurso sobre produção e lançamento de foguetes para o ensino de Física, a geração de dados que contribuam para futuras melhorias tecnológicas e um artigo publicado em uma revista de ensino de Física. O projeto inova ao propor uma abordagem teórica e aplicada a um sistema amplamente explorado, mas ainda pouco difundido nas nossas escolas do ponto de vista científico e tecnológico.
 
-
-
-Thanks for reading more about.
+Obrigado por ler mais sobre!
 

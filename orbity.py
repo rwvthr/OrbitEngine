@@ -65,20 +65,19 @@ def ascii():
 def header():
     asciiart = ascii()
 
-    options1 = r"""
-[01] - More about the project
-[02] - View Important Notices
-[03] - Intrusions Manual
-[04] - Start the program
-[00] - Exit
+    options1 = f"""
+\033[38;5;208m[\033[97m01\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Mais sobre o projeto
+\033[38;5;208m[\033[97m02\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Ver avisos importantes
+\033[38;5;208m[\033[97m03\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Manual de instruções
+\033[38;5;208m[\033[97m04\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Inciar programa
+\033[38;5;208m[\033[97m00\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Sair
 """
 
-    print(f"\033[38;5;208m{asciiart}\033[0m")
-    print(f"\033[38;2;64;224;208m{options1}\033[0m")
+    print(f"\033[38;5;208m{asciiart}\033[0m")  
+    print(options1)  
 
 #Função da mensagem de voltar
 def mensagemvoltar():
-    print('\033[38;2;64;224;208mPress the Y key to return to the menu.\033[0m')
     print('\033[38;2;64;224;208mPressione a tecla Y para retornar ao menu.\033[0m')
 
     back = input('\033[38;5;208m>>>\033[0m').strip().lower()
@@ -106,7 +105,7 @@ while key > keyback[index]:
     header()
 
     try:
-        pergunta = int(input('\033[38;2;64;224;208mPlease select an option: \033[0m').strip())
+        pergunta = int(input('\033[38;2;64;224;208mPor favor, selecione uma opção: \033[0m').strip())
         print(' ')
 
         loadinganm()
@@ -154,16 +153,18 @@ while key > keyback[index]:
             index += 1
 
         else:
-            print('Invalid value, please try again.')
+            print('')
+            print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+            print('')
             loadinganm()
             clear_screen()
             continue
 
     except ValueError:
-        print('Invalid value, please try again.')
-        print('Loading...')
-        time.sleep(1)
-        key = 1
+        print('')
+        print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+        print('')
+        loadinganm()
         clear_screen()
 
     

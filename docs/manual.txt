@@ -1,28 +1,4 @@
-Manual:
-
-English version -
-
-Before accessing the main menu, let's explain how the program works: 
-
-Program division:
-The Orbity program is divided into two main parts: Calculations and Graph Generation.
-Follow the recommended steps to use the program efficiently:
-
-Recommendations:
-
-[01] Read the important notices to understand the program's limitations and recommendations;   
-[02] Access the main menu to choose the desired service, whether it is a specific calculation or the generation of a graph; 
-[03] Enter the number corresponding to the desired service, and follow the instructions to provide the data necessary for the calculation or graph;
-[04] Review the results obtained, and if necessary, make adjustments to the input data to obtain more accurate results;    
-[05] At the end, you will receive a message asking if you want to return to the main menu or end the program, choose the desired option to continue or end your experience.    
-[06] We hope it will be a useful tool for your studies and projects related to educational rocket launching!
-
-Help us know what we need to improve with suggestions through the form: https://forms.gle/n7WmyAywG3jtzmXh6
-Complaints here: https://forms.gle/epFcaFW2G2wxvWJcA
-
-
-Portuguese version - 
-
+Manual!
 
 Antes de acessar o menu principal, vamos explicar como o programa funciona: 
 

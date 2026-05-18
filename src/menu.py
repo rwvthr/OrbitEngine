@@ -18,37 +18,27 @@ def asciimenu():
 """ 
     return asciiart
 
-def header():
-    asciiart = asciimenu()
-    return asciiart
-
 def headermenu():
     asciiart = asciimenu()
 
-    options1 = r"""
+    options1 = f"""
+\033[38;5;208m[\033[97m01\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Calcular o trabalho realizado pelo gás dentro da base.
+\033[38;5;208m[\033[97m02\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Calcular alcance do foguete.
+\033[38;5;208m[\033[97m03\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Calcular a variação da energia interna do gás.
+\033[38;5;208m[\033[97m04\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Calcular a velocidade do foguete em função de W.
+\033[38;5;208m[\033[97m05\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Calcular a velocidade do foguete em função de ΔU.
+\033[38;5;208m[\033[97m06\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Calcular a valocidade (para facilitar o cálculo do rendimento).
+\033[38;5;208m[\033[97m07\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Calcular rendimento η.
 
-[+] Calculation
-
-[01] - Calcular o trabalho realizado pelo gás dentro da base.
-[02] - Calcular alcance do foguete.
-[03] - Calcular a variação da energia interna do gás.
-[04] - Calcular a velocidade do foguete em função de W.
-[05] - Calcular a velocidade do foguete em função de ΔU.
-[06] - Calcular a valocidade (para facilitar o cálculo do rendimento).
-[07] - Calcular rendimento η.
-
-[+] Graphics
-
-[08] - Gerar gráfico do Alcance x Pressão Final.
-[09] - Gerar gráfico do Alcance x Rendimento.
-[10] - Gerar gráfico de V0x x Tempo.
-[11] - Gerar gráfico de V0y x Tempo.
-[00] - Encerrar programa.
-
+\033[38;5;208m[\033[97m08\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Gerar gráfico do Alcance x Pressão Final.
+\033[38;5;208m[\033[97m09\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Gerar gráfico do Alcance x Rendimento.
+\033[38;5;208m[\033[97m10\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Gerar gráfico de V0x x Tempo.
+\033[38;5;208m[\033[97m11\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Gerar gráfico de V0y x Tempo.
+\033[38;5;208m[\033[97m00\033[38;5;208m]\033[0m \033[38;2;64;224;208m- Encerrar programa.
 """
 
     print(f"\033[38;5;208m{asciiart}\033[0m")
-    print(f"\033[38;2;64;224;208m{options1}\033[0m")
+    print(options1)
 
 chaveanterior = [0]
 chave = 1
@@ -58,7 +48,7 @@ while chave > chaveanterior[index]:
     headermenu()
 
     try:
-        pergunta = int(input('\033[38;2;64;224;208mPlease select an option: \033[0m').strip())
+        pergunta = int(input('\033[38;2;64;224;208mPor favor, selecione uma opção: \033[0m').strip())
         print(' ')
 
         clear_screen()
