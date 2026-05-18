@@ -19,7 +19,7 @@ That's what Orbity was created for! It will basically show you, through data, ho
 
 - Important! On Windows, During Python installation check the "Add Python to PATH" option!
 
-### 🪟 Windows
+## 🪟 Windows
 
 1. Open the command prompt
 
@@ -69,7 +69,7 @@ pip install --only-binary :all: matplotlib
 python orbity.py
 ```
 
-### 🐧 Linux
+## 🐧 Linux
 
 1. Open bash
 
