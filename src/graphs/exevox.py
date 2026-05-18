@@ -47,13 +47,16 @@ while chave > counter:
         alcance = (5*v*n*(p1-p2)*sen_2tet)/(m*g)
         vfxenerit = math.sqrt(((5*v*n)*(p1-p2)/m))
 
+        print(' ')
+        loadingcalc()
+
         print(f'''
               
 \033[38;5;208mO alcance do foguete é de >>> \033[94m{alcance:.2f} \033[38;5;208mmetros e a velocidade final do
 foguete é de >>> \033[94m{vfxenerit:.2f} \033[38;5;208mmetros por segundo.
 \033[0m''')
 
-        inicializar = input('\033[94mDeseja utilizar o programa novamente ? [Y/N] >>> \033[0m').strip().upper()
+        inicializar = input('\033[94mDeseja modificar algum valor antes de gerar o gráfico ? [Y/N] >>> \033[0m').strip().upper()
         print(' ')
         if inicializar[0] == 'Y':
             counter = 0

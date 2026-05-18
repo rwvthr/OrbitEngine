@@ -1,22 +1,45 @@
-import time
-from os import system
 import math
 from src.graphs.exevox import alcance, vfxenerit, tet
 import numpy as np
 import matplotlib.pyplot as plt
+from src.functions import loading, clear_screen
 
-chave = True
-while chave:
+def ascii():
+    asciiart = r"""     
+      ___       _     _ _                        
+     / _ \ _ __| |__ (_) |_ _   _               
+    | | | | '__| '_ \| | __| | | |              
+    | |_| | |  | |_) | | |_| |_| |              
+     \___/|_|  |_.__/|_|\__|\__, |             
+                            |___/   
+
+        O R B I T Y - v1.0.0.1
+         Author: rwvthrdev        
+""" 
+    return asciiart
+
+def header():
+    asciiart = ascii()
+    print(f"\033[38;5;208m{asciiart}\033[0m")
+
+chave = 1
+counter = 0
+
+while chave > counter:
     try:
-        #Cálculo v0x
+        print(' ')
+        header()
+        
         vox = vfxenerit * math.cos(tet)
         tempo = alcance/vfxenerit
 
-        print(f'O valor do V0x é de aproximadamente {vox:.2f} m/s.')
-        print(f'O tempo de voo do foguete é de aproximadamente {tempo:.2f} segundos.')
+        print(f'''
+              
+\033[38;5;208mO valor da velocidade horizontal V0x é >>> \033[94m{vox:.2f} \033[38;5;208mmetros por segundo e o tempo de vôo do foguete é 
+de >>> \033[94m{tempo:.2f} \033[38;5;208msegundos.
+\033[0m''')
 
-        time.sleep(5)
-        system('cls')
+        espera = input('\033[94mAperte ENTER para mostrar o gráfico >>> \033[0m')
 
         temp = np.linspace(0, tempo, 10)
         ve0x = np.full_like(temp, vox)
@@ -30,23 +53,39 @@ while chave:
         plt.tight_layout()
         plt.show()
 
-        time.sleep(3)
-        system('cls')
+        print(' ')
 
-        p = input('Deseja reajustar os valores e o gráfico? (S/N): ').strip().upper()
-        if p[0] == 'S':
-            chave = True
+        p = input('\033[94mDeseja ver novamente o gráfico? [Y/N] >>> \033[0m').strip().upper()
+        if p[0] == 'Y':
+            counter = 0
+            clear_screen()
+
+        elif p[0] == 'N':
+            loading()
+            counter += 1
+            clear_screen()
+
         else:
-            print('Carregando...')
-            time.sleep(2)
-            chave = False
-            system('cls')
+            print('')
+            print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+            print('')
+            loading()
+            counter = 0
+            clear_screen()
             
     except ValueError:
-        print('\nValor inválido, tente novamente.')
-        print('\nCarregando...')
-        time.sleep(1)
-        chave = True
-        system('cls')
-
+        print('')
+        print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+        print('')
+        loading()
+        counter = 0
+        clear_screen()
+    
+    except ZeroDivisionError:
+        print('')
+        print('\033[38;2;255;20;147mNão é possível dividir por zero, tente novamente.\033[0m')
+        print('')
+        loading()
+        counter = 0
+        clear_screen()
 
