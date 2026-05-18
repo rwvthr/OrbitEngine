@@ -119,7 +119,4 @@ python3 orbity.py
 
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/rwvthrdev) 
 
-## Author
-
-[rwvthrdev](https://github.com/rwvthrdev)
 
