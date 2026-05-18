@@ -1,5 +1,4 @@
 import time
-from os import system
 import importlib
 import sys
 
