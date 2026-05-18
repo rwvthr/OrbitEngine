@@ -14,9 +14,36 @@ That's what Orbity was created for! It will basically show you, through data, ho
 
 ### Requirements
 
-- **Git**: To clone repositore. >>> [Git Site](https://git-scm.com)
-- **Python**: Version 3.8 or higher. >>>  [Python Site](https://www.python.org/downloads/)
+- **Git**: To clone repositore. -> [Git Site](https://git-scm.com)
+- **Python**: Version 3.8 or higher. ->  [Python Site](https://www.python.org/downloads/)
 
 - Important! On Windows, During Python installation check the "Add Python to PATH" option!
 
-### 🪟 Windows: 
+### 🪟 Windows
+
+1. Open the command prompt:
+
+```bash
+#Press keys
+Win + R 
+
+#Type
+cmd
+
+#Press option
+Ok
+
+#(If administrator permission is required, press Win, type "command prompt" and run as administrator).
+
+```
+
+2. Inside the command prompt (cmd), type:
+
+```bash
+#Go to the documents folder.
+cd Documents
+
+#Clone the repository
+git clone https://github.com/rwvthrdev/Orbity.git
+
+```
