@@ -1,5 +1,3 @@
-from os import system
-import time
 from src.functions import loading, loadingcalc, clear_screen
 
 def ascii():

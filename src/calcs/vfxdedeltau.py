@@ -1,5 +1,3 @@
-from os import system
-import time
 import math
 from src.functions import loading, loadingcalc, clear_screen
 

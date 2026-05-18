@@ -1,6 +1,3 @@
-import math
-from os import system
-import time
 import numpy as np
 import matplotlib.pyplot as plt
 from src.functions import loadingcalc, clear_screen, loading
