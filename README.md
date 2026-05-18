@@ -21,18 +21,7 @@ That's what Orbity was created for! It will basically show you, through data, ho
 
 ### 🪟 Windows
 
-1. Open the command prompt:
-
-```bash
-#Press keys
-Win + R 
-#Type
-cmd
-#Press option
-Ok
-
-#(If administrator permission is required, press Win, type "command prompt" and run as administrator).
-```
+1. Open the command prompt.
 
 2. Inside the command prompt (cmd), type:
 
