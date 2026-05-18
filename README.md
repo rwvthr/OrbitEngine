@@ -49,3 +49,15 @@ python -m venv .venv
 ```bash
 .venv\Scripts\activate
 ```
+
+6. Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+7. Run the file:
+
+```bash
+python orbity.py
+```
