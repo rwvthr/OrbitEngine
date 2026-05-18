@@ -1,19 +1,48 @@
 import math
 from os import system
 import time
-import numy as np
+import numpy as np
 import matplotlib.pyplot as plt
+from src.functions import loadingcalc, clear_screen, loading
 
-chave = True
-while chave:
+def ascii():
+    asciiart = r"""     
+      ___       _     _ _                        
+     / _ \ _ __| |__ (_) |_ _   _               
+    | | | | '__| '_ \| | __| | | |              
+    | |_| | |  | |_) | | |_| |_| |              
+     \___/|_|  |_.__/|_|\__|\__, |             
+                            |___/   
+
+        O R B I T Y - v1.0.0.1
+         Author: rwvthrdev        
+""" 
+    return asciiart
+
+def header():
+    asciiart = ascii()
+
+    options1 = r"""
+[!] - Bem-vindo ao módulo 9: Gráfico do Alcance x Rendimento.
+"""
+
+    print(f"\033[38;5;208m{asciiart}\033[0m")
+    print(f"\033[94m{options1}\033[0m")
+
+chave = 1
+counter = 0
+
+
+while chave > counter:
     try:
-        print('-'*100)
-        print('Bem vindo ao módulo de geração de gráfico do Alcance x Rendimento!')
+        print(' ')
+        header()
 
-        print('-'*100)
+        n = float(input('\033[38;5;208mDigite o rendimento em porcentagem (Obs: sem o "%") >>> \033[0m'))
+        alcance = float(input('\033[38;5;208mDigite o valor do alcance em metros >>> \033[0m'))
 
-        n = float(input('Digite o valor do rendimento (η) em porcentagem: '))
-        alcance = float(input('Digite o valor do alcance em metros: '))
+        print(' ')
+        loadingcalc()
 
         alc = np.linspace(0, alcance, 10)
         eta = np.linspace(0, n, 10) 
@@ -26,23 +55,41 @@ while chave:
         plt.tight_layout()
         plt.legend()
         plt.show()
+        
+        print(''' 
+''')
 
-        time.sleep(1)
-        system('cls')
+        inicializar = input('\033[94mDeseja utilizar o programa novamente ? [Y/N] >>> \033[0m').strip().upper()
+        print(' ')
+        if inicializar[0] == 'Y':
+            counter = 0
+            clear_screen()
+                    
+        elif inicializar[0] == 'N':
+            loading()
+            counter += 1
+            clear_screen()
 
-        incializar = input('Deseja gerar outro gráfico? (S/N): ').strip().upper()
-        if incializar[0] == 'S':
-            chave = True
-            system('cls')
-        else:
-            print('Carregando...')
-            time.sleep(2)
-            chave = False
-            system('cls')
-            
+        else: 
+            print('')
+            print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+            print('')
+            loading()
+            counter = 0
+            clear_screen()
+    
     except ValueError:
-        print('\nValor inválido, tente novamente.')
-        print('\nCarregando...')
-        time.sleep(1)
-        chave = True
-        system('cls')
+        print('')
+        print('\033[38;2;255;20;147mValor inválido, tente novamente.\033[0m')
+        print('')
+        loading()
+        counter = 0
+        clear_screen()
+    
+    except ZeroDivisionError:
+        print('')
+        print('\033[38;2;255;20;147mNão é possível dividir por zero, tente novamente.\033[0m')
+        print('')
+        loading()
+        counter = 0
+        clear_screen()

@@ -3,7 +3,7 @@ from os import system
 import importlib
 import sys
 
-
+#Função Limpar Tela
 def clear_screen():
     from os import system
     import platform
@@ -12,6 +12,7 @@ def clear_screen():
     else:
         system('clear')
 
+#Animação de carregamento
 def loadinganm():
     AZUL = '\033[94m'                      
     ROSA_VIBRANTE = '\033[38;2;255;20;147m' 
@@ -28,7 +29,7 @@ def loadinganm():
             sys.stdout.write(f"\r{AZUL}{msg}{RESET} {NEGRITO}{ROSA_VIBRANTE}{animation[i % len(animation)]}{RESET}")
             sys.stdout.flush()
 
-
+#Animação de Saída
 def loadinganmexit():
     AZUL = '\033[94m'                      
     ROSA_VIBRANTE = '\033[38;2;255;20;147m' 
@@ -45,7 +46,7 @@ def loadinganmexit():
             sys.stdout.write(f"\r{AZUL}{msg}{RESET} {NEGRITO}{ROSA_VIBRANTE}{animation[i % len(animation)]}{RESET}")
             sys.stdout.flush()
 
-
+#Ascii art do Orbity
 def ascii():
     asciiart = r"""     
       ___       _     _ _                        
@@ -59,7 +60,8 @@ def ascii():
          Author: rwvthrdev        
 """ 
     return asciiart
-#Função do menu
+
+#Função para mostrar o cabeçalho do menu
 def header():
     asciiart = ascii()
 
@@ -73,7 +75,8 @@ def header():
 
     print(f"\033[38;5;208m{asciiart}\033[0m")
     print(f"\033[38;2;64;224;208m{options1}\033[0m")
-#Mensagem de volta
+
+#Função da mensagem de voltar
 def mensagemvoltar():
     print('\033[38;2;64;224;208mPress the Y key to return to the menu.\033[0m')
     print('\033[38;2;64;224;208mPressione a tecla Y para retornar ao menu.\033[0m')
@@ -82,6 +85,7 @@ def mensagemvoltar():
 
     print(' ')
     return back
+
 #Mensagem leave
 def mensagemend():
     print('\033[38;2;64;224;208mYou chose to leave the program! Thanks for using. :)\033[0m')
@@ -90,9 +94,11 @@ def mensagemend():
 
     loadinganmexit()
 
+#Contador para o While (decidi usar essa lógica muito doida)
 keyback = [0]
 key = 1
 index = 0
+
 
 while key > keyback[index]:
     clear_screen()
@@ -161,4 +167,4 @@ while key > keyback[index]:
         clear_screen()
 
     
-#end
+#End
