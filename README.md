@@ -21,9 +21,9 @@ That's what Orbity was created for! It will basically show you, through data, ho
 
 ### 🪟 Windows
 
-1. Open the command prompt.
+1. Open the command prompt
 
-2. Inside the command prompt (cmd), type:
+2. Inside the command prompt (cmd), type
 
 ```bash
 
@@ -32,38 +32,80 @@ cd Documents
 git clone https://github.com/rwvthrdev/Orbity.git
 ```
 
-3. Go to the project folder:
+3. Go to the project folder
 
 ```bash
 cd orbity
 ```
 
-4. Create a virtual environment:
+4. Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-5. Activate the virtual environment:
+5. Activate the virtual environment
 
 ```bash
 .venv\Scripts\activate
 ```
 
-6. Install the dependencies:
+6. Install the dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-!If you encounter an error in NumPy like I did, paste this command:
+!If you encounter an error in NumPy and Matplotlib like I did, paste this command
 
 ```bash
 pip install --only-binary :all: numpy
+pip install --only-binary :all: matplotlib
 ```
 
-7. Run the file:
+7. Run the file
 
 ```bash
 python orbity.py
 ```
+
+### 🐧 Linux
+
+1. Open bash
+
+2. Inside the bash, type
+
+```bash
+cd ~/Documents
+
+git clone https://github.com/rwvthrdev/Orbity.git
+```
+
+3. Go to the project folder
+
+```bash
+cd orbity
+```
+
+4. Create a virtual environment
+
+```bash
+python3 -m venv .venv
+```
+
+5. Activate
+
+```bash
+source .venv\bin\activate
+```
+
+6. Install the dependencies.
+
+```bash
+pip install -r requirements.txt
+```
+
+7. Run the project
+
+```bash
+python3 orbity.py
